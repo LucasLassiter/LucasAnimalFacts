@@ -1,0 +1,23 @@
+{% load static %}
+<div class="navbar">
+    <div class="container">
+        <div class="main-element">
+            <a href="">
+                <img class="mainlogo" src="{% static '/mainpictures/Animal Facts Bannertansparences.png' %}" alt="">
+            </a>
+            <img id="menu-btn" class="menu-btn" src="{% static '/mainpictures/menu.svg' %}" alt="">
+        </div>
+        <nav>
+            <img id="exit-btn" class="exit-btn" src="{% static '/mainpictures/exit.svg' %}" alt="">
+            <ul class="nav-element"> 
+                <li>Home</li>
+                <li>News</li>
+                <li>Travel</li>
+                <li><input class="search" type="text" placeholder="Search"></li>
+            </ul>
+        </nav>
+        
+    </div>
+</div>
+
+<script src="{% static '/scripts/index.js' %}"></script>

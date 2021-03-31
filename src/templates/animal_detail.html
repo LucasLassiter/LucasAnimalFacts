@@ -1,0 +1,9 @@
+{% extends 'Animal_Base.html' %}
+
+{% block title %}{{ object.name }}{% endblock %}
+
+{% block content %}
+    <h1>{{ object.name }}</h1>
+    <img src="{{ object.image.all.first.image.url }}" alt="">
+    <p>{{ object.information }}</p>
+{% endblock %}
