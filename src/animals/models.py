@@ -26,9 +26,22 @@ class Animal(models.Model):
     information =   models.TextField(blank=True, null=True)
     image =         models.ManyToManyField(AnimalPicture)
     date =          models.DateField()
+    writer =        models.CharField(max_length=120)
     featured =      models.BooleanField(default=False)
     tags =          models.ManyToManyField(Tag)
     slug =          models.SlugField()
+
+    # Table Data
+
+    common_name =           models.CharField(max_length=120)
+    scientific_name =       models.CharField(max_length=120)
+    animal_class =          models.CharField(max_length=120)
+    diet =                  models.CharField(max_length=120)
+    avg_life_span =         models.CharField(max_length=120)
+    weight =                models.CharField(max_length=120)
+    size =                  models.CharField(max_length=120)
+    habitat =               models.CharField(max_length=120)
+    cur_pop_trend =         models.CharField(max_length=120)
 
     def __str__(self):
         return f'{self.pk} - {self.name}'

@@ -2,7 +2,7 @@
 <div class="navbar">
     <div class="container">
         <div class="main-element">
-            <a href="">
+            <a href="{% url 'page_home' %}">
                 <img class="mainlogo" src="{% static '/mainpictures/Animal Facts Bannertansparences.png' %}" alt="">
             </a>
             <img id="menu-btn" class="menu-btn" src="{% static '/mainpictures/menu.svg' %}" alt="">
@@ -10,9 +10,9 @@
         <nav>
             <img id="exit-btn" class="exit-btn" src="{% static '/mainpictures/exit.svg' %}" alt="">
             <ul class="nav-element"> 
-                <li>Home</li>
-                <li>News</li>
-                <li>Travel</li>
+                <a href=""><li>Home</li></a>
+                <a href=""><li>News</li></a>
+                <a href=""><li>Travel</li></a>
                 <li><input class="search" type="text" placeholder="Search"></li>
             </ul>
         </nav>
