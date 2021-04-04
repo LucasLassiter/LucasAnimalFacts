@@ -12,6 +12,11 @@ from django.views.generic import (
 
 from .models import Animal
 
+class AnimalListView(ListView):
+    template_name = 'animal_list.html'
+    queryset = Animal.objects.all()
+    context_object_name = 'animals'
+
 # Create your views here.
 class AnimalDetailView(DetailView):
     template_name = 'animal_detail.html'
@@ -43,6 +48,3 @@ class AnimalDetailView(DetailView):
         context['split_info'] = self.animal_info
 
         return context
-
-def animal_detail(request):
-    return(request, 'animal_detail.html', {})
