@@ -1,0 +1,33 @@
+.header-text {
+    text-align: center;
+    color: white;
+}
+
+.alphabet-container {
+    color: #D6D6D6;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 25%);
+    grid-auto-rows: minmax(100%, 100%);
+    justify-content: space-around;
+}
+
+.animal-container {
+    background-color: white;
+    position: relative;
+    display: inline-block;
+}
+
+.animal-container img {
+    width: 100%;
+}
+
+.animal-container p {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5em;
+    color: black;
+}

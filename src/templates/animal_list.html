@@ -3,13 +3,17 @@
 {% block title %}All animals{% endblock %}
 {% block content %}
 
-<h1>All Animals</h1>
-<p>a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+<span class="header-text"><h1>All Animals</h1></span>
+<span class="alphabet-container"><p>a b c d e f g h i j k l m n o p q r s t u v w x y z</p></span>
 
+<div class="grid-container">
     {% for animal in animals %}
+    <a href="{{ animal.get_absolute_url }}">
         <div class="animal-container">
             <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
             <p>{{ animal.name }}</p>
         </div>
+    </a>
     {% endfor %}
+</div>
 {% endblock %}

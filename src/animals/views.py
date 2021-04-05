@@ -16,6 +16,29 @@ class AnimalListView(ListView):
     template_name = 'animal_list.html'
     queryset = Animal.objects.all()
     context_object_name = 'animals'
+    alphabeticalized_animals = None
+
+    def sort_animals(self):
+        self.alphabeticalized_animals = []
+        alphabet = 'abcdefghifklmnopqrstuvwxyz'
+        for letter in alphabet:
+            self.alphabeticalized_animals.append([])
+
+        print(self.queryset)
+
+        for animal in self.queryset:
+            for x in self.alphabeticalized_animals:
+
+
+        print(self.alphabeticalized_animals)
+
+
+
+    def get_context_data(self, **kwargs):
+        queryset = Animal.objects.all()
+        self.sort_animals()
+        self.alphabeticalized_animals.clear
+
 
 # Create your views here.
 class AnimalDetailView(DetailView):
@@ -24,10 +47,8 @@ class AnimalDetailView(DetailView):
     animal_info = None
 
     def split_info(self):
-        print('!!!!!!!!!!! YEET !!!!!!!!!!!!!!!!!!!!!')
         id = self.kwargs.get('slug')
         self.animal_info = get_object_or_404(Animal, slug=id).information
-        print(f'!!!!!!!!!!!!!!!!!!!!!!! {self.animal_info}')
         self.animal_info = self.animal_info.split('~')
         return self.animal_info
 
