@@ -19,6 +19,6 @@ from animals.views import AnimalDetailView, AnimalListView
 
 app_name = 'animals'
 urlpatterns = [
-    path('allanimals/<slug:slug>/', AnimalDetailView.as_view(), name='animal_detail'),
-    path('allanimals/', AnimalListView.as_view(), name='animal_list'),
+    path('<slug:slug>/', AnimalDetailView.as_view(), name='animal_detail'),
+    path('', AnimalListView.as_view(), name='animal_list'),
 ]
