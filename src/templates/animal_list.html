@@ -3,17 +3,401 @@
 {% block title %}All animals{% endblock %}
 {% block content %}
 
-<span class="header-text"><h1>All Animals</h1></span>
-<span class="alphabet-container"><p>a b c d e f g h i j k l m n o p q r s t u v w x y z</p></span>
+    <span class="header-text"><h1>All Animals</h1></span>
+    <span class="alphabet-container"><p>a b c d e f g h i j k l m n o p q r s t u v w x y z</p></span>
 
-<div class="grid-container">
-    {% for animal in animals %}
-    <a href="{{ animal.get_absolute_url }}">
-        <div class="animal-container">
-            <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
-            <p>{{ animal.name }}</p>
+    <div class="list-container">
+
+        <h1>A</h1>
+
+        {% for animal in obj.0 %}
+        <br>
+        <div class="grid-container">
+
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
         </div>
-    </a>
-    {% endfor %}
-</div>
+        {% endfor %}
+
+        <h1>B</h1>
+
+        {% for animal in obj.1 %}
+        <br>
+        <div class="grid-container"> 
+
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
+        </div>
+        {% endfor %}
+
+        <h1>C</h1>
+
+        {% for animal in obj.2 %}
+        <br>
+        <div class="grid-container">
+
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
+        </div>
+        {% endfor %}
+
+        <h1>D</h1>
+
+        {% for animal in obj.3 %}
+        <br>
+        <div class="grid-container">
+
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
+        </div>
+        {% endfor %}
+
+        <h1>E</h1>
+
+
+        {% for animal in obj.4 %}
+        <br>
+        <div class="grid-container">
+
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
+        </div>
+        {% endfor %}
+
+        <h1>F</h1>
+
+        {% for animal in obj.5 %}
+        <br>
+        <div class="grid-container">
+
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
+        </div>
+        {% endfor %}
+        
+        <h1>G</h1>
+
+        {% for animal in obj.6 %}
+        <br>
+        <div class="grid-container">
+
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
+        </div>
+        {% endfor %}
+
+        <h1>H</h1>
+
+        {% for animal in obj.7 %}
+        <br>
+        <div class="grid-container"> 
+
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
+        </div>
+        {% endfor %}
+
+        <h1>I</h1>
+
+        {% for animal in obj.8 %}
+        <br>
+        <div class="grid-container">
+
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
+        </div>
+        {% endfor %}
+
+        <h1>J</h1>
+
+        {% for animal in obj.9 %}
+        <br>
+        <div class="grid-container">
+
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
+        </div>
+        {% endfor %}
+
+        <h1>K</h1>
+
+        {% for animal in obj.10 %}
+        <br>
+        <div class="grid-container">
+
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
+        </div>
+        {% endfor %}
+
+        <h1>L</h1>
+
+        {% for animal in obj.11 %}
+        <br>
+        <div class="grid-container"> 
+
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
+        </div>
+        {% endfor %}
+
+        <h1>M</h1>
+
+        {% for animal in obj.12 %}
+        <br>
+        <div class="grid-container"> 
+
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
+        </div>
+        {% endfor %}
+
+        <h1>N</h1>
+
+        {% for animal in obj.13 %}
+        <br>
+        <div class="grid-container">
+
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
+        </div>
+        {% endfor %}
+
+        <h1>O</h1>
+
+        {% for animal in obj.14 %}
+        <br>
+        <div class="grid-container">
+
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
+        </div>
+        {% endfor %}
+
+        <h1>P</h1>
+
+        {% for animal in obj.15 %}
+        <br>
+        <div class="grid-container"> 
+
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
+        </div>
+        {% endfor %}
+
+        <h1>Q</h1>
+
+        {% for animal in obj.16 %}
+        <br>
+        <div class="grid-container"> 
+
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
+        </div>
+        {% endfor %}
+
+        <h1>R</h1>
+
+        {% for animal in obj.17 %}
+        <br>
+        <div class="grid-container"> 
+
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
+        </div>
+        {% endfor %}
+
+        <h1>S</h1>
+
+        {% for animal in obj.18 %}
+        <br>
+        <div class="grid-container"> 
+
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
+        </div>
+        {% endfor %}
+
+        <h1>T</h1>
+
+        {% for animal in obj.19 %}
+        <br>
+        <div class="grid-container"> 
+
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
+        </div>
+        {% endfor %}
+
+        <h1>U</h1>
+
+        {% for animal in obj.20 %}
+        <br>
+        <div class="grid-container"> 
+
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
+        </div>
+        {% endfor %}
+
+        <h1>V</h1>
+
+        {% for animal in obj.21 %}
+        <br>
+        <div class="grid-container">
+
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
+        </div>
+        {% endfor %}
+
+        <h1>W</h1>
+
+        {% for animal in obj.22 %}
+        <br>
+        <div class="grid-container">
+
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
+        </div>
+        {% endfor %}
+
+        <h1>X</h1>
+
+        {% for animal in obj.23 %}
+        <br>
+        <div class="grid-container">
+
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
+        </div>
+        {% endfor %}
+
+        <h1>Y</h1>
+
+        {% for animal in obj.24 %}
+        <br>
+        <div class="grid-container">
+
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
+        </div>
+        {% endfor %}
+
+        <h1>Z</h1>
+
+        {% for animal in obj.25 %}
+        <br>
+        <div class="grid-container">
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
+        </div>
+        {% endfor %}
+    </div>
+
+    
 {% endblock %}

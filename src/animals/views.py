@@ -18,6 +18,7 @@ class AnimalListView(ListView):
     context_object_name = 'animals'
     alphabeticalized_animals = None
 
+    # Sorts the animals alphabetically into a nested list
     def sort_animals(self):
         self.alphabeticalized_animals = []
         alphabet = 'abcdefghifklmnopqrstuvwxyz'
@@ -27,17 +28,23 @@ class AnimalListView(ListView):
         print(self.queryset)
 
         for animal in self.queryset:
-            for x in self.alphabeticalized_animals:
+            for index, x in enumerate(self.alphabeticalized_animals):
+                print(f'{animal.name} - {alphabet[index]}')
+                if animal.name.startswith(alphabet[index].upper()):
+                    print('FOUND!')
+                    x.append(animal)
 
-
+                
         print(self.alphabeticalized_animals)
 
 
 
     def get_context_data(self, **kwargs):
-        queryset = Animal.objects.all()
+        context = super().get_context_data(**kwargs)
         self.sort_animals()
+        context['obj'] = self.alphabeticalized_animals
         self.alphabeticalized_animals.clear
+        return context
 
 
 # Create your views here.
@@ -46,6 +53,7 @@ class AnimalDetailView(DetailView):
     queryset = Animal.objects.all()
     animal_info = None
 
+    # Split the animal descriptions into different sections
     def split_info(self):
         id = self.kwargs.get('slug')
         self.animal_info = get_object_or_404(Animal, slug=id).information
@@ -56,6 +64,7 @@ class AnimalDetailView(DetailView):
         id = self.kwargs.get('slug')
         return get_object_or_404(Animal, slug=id)
 
+    # Return context to use in template
     def get_context_data(self, **kwargs):          
         context = super().get_context_data(**kwargs) 
         id = self.kwargs.get('slug')                    
