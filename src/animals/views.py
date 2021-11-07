@@ -78,3 +78,11 @@ class AnimalDetailView(DetailView):
         context['split_info'] = self.animal_info
 
         return context
+
+def AnimalSearch(request):
+    if request.method == 'POST':
+        searched = request.POST['searched']
+        animals = Animal.objects.filter(tags__title__contains=searched)
+        return render(request, 'search_results.html', {'searched': searched, 'animals': animals})
+    else:
+        return render(request, 'search_results.html', {})

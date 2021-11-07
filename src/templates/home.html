@@ -17,7 +17,7 @@
         <div class="cta">
             <div class="cta-container">
                 <h1>Discover many more animals!</h1>
-                <a href="#">Discover</a>
+                <a href="{% url 'animals:animal_list' %}">Discover</a>
             </div>
         </div>
     </div>
@@ -28,7 +28,7 @@
         <ul class="travel-list">
             {% for i in travel_list %}
             <li>
-                <a href="https://www.duckduckgo.com">
+                <a href="{{ i.get_absolute_url }}">
                     <div class="travel-item">
                         <img src="{{ i.image.all.first.image.url }}" alt="{{ i.image.all.first.description }}">
                         <h1>Travel - {{ i.title }}</h1>

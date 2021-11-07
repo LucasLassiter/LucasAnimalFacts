@@ -4,30 +4,29 @@
 {% block content %}
 
     <span class="header-text"><h1>All Animals</h1></span>
-    <span class="alphabet-container"><p>a b c d e f g h i j k l m n o p q r s t u v w x y z</p></span>
+    <span class="alphabet-container"><p><a href="#a">a</a> <a href="#b">b</a> <a href="#c">c</a> <a href="#d">d</a> <a href="#e">e</a> <a href="#f">f</a> <a href="#g">g</a> <a href="#h">h</a> <a href="#i">i</a> <a href="#j">j</a> <a href="#k">k</a> <a href="#l">l</a> <a href="#m">m</a> <a href="#n">n</a> <a href="#o">o</a> <a href="#p">p</a> <a href="#q">q</a> <a href="#r">r</a> <a href="#s">s</a> <a href="#t">t</a> <a href="#u">u</a> <a href="#v">v</a> <a href="#w">w</a> <a href="#x">x</a> <a href="#y">y</a> <a href="#z">z</a> </p></span>
 
     <div class="list-container">
 
-        <h1>A</h1>
-
-        {% for animal in obj.0 %}
+        <h1 id="a">A</h1>
         <br>
         <div class="grid-container">
-
+            {% for animal in obj.0 %}
                 <a href="{{ animal.get_absolute_url }}">
                     <div class="animal-container">
                         <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
                         <p>{{ animal.name }}</p>
                     </div>
                 </a>
+            {% endfor %}
         </div>
-        {% endfor %}
 
-        <h1>B</h1>
 
-        {% for animal in obj.1 %}
+        <h1 id="b">B</h1>
+
         <br>
         <div class="grid-container"> 
+            {% for animal in obj.1 %}
 
                 <a href="{{ animal.get_absolute_url }}">
                     <div class="animal-container">
@@ -35,14 +34,14 @@
                         <p>{{ animal.name }}</p>
                     </div>
                 </a>
+            {% endfor %}
         </div>
-        {% endfor %}
 
-        <h1>C</h1>
+        <h1 id="c">C</h1>
 
-        {% for animal in obj.2 %}
         <br>
         <div class="grid-container">
+            {% for animal in obj.2 %}
 
                 <a href="{{ animal.get_absolute_url }}">
                     <div class="animal-container">
@@ -50,60 +49,14 @@
                         <p>{{ animal.name }}</p>
                     </div>
                 </a>
+            {% endfor %}
         </div>
-        {% endfor %}
 
-        <h1>D</h1>
-
-        {% for animal in obj.3 %}
+        <h1 id="d">D</h1>
         <br>
-        <div class="grid-container">
-
-                <a href="{{ animal.get_absolute_url }}">
-                    <div class="animal-container">
-                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
-                        <p>{{ animal.name }}</p>
-                    </div>
-                </a>
-        </div>
-        {% endfor %}
-
-        <h1>E</h1>
-
-
-        {% for animal in obj.4 %}
-        <br>
-        <div class="grid-container">
-
-                <a href="{{ animal.get_absolute_url }}">
-                    <div class="animal-container">
-                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
-                        <p>{{ animal.name }}</p>
-                    </div>
-                </a>
-        </div>
-        {% endfor %}
-
-        <h1>F</h1>
-
-        {% for animal in obj.5 %}
-        <br>
-        <div class="grid-container">
-
-                <a href="{{ animal.get_absolute_url }}">
-                    <div class="animal-container">
-                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
-                        <p>{{ animal.name }}</p>
-                    </div>
-                </a>
-        </div>
-        {% endfor %}
         
-        <h1>G</h1>
-
-        {% for animal in obj.6 %}
-        <br>
         <div class="grid-container">
+            {% for animal in obj.3 %}
 
                 <a href="{{ animal.get_absolute_url }}">
                     <div class="animal-container">
@@ -111,14 +64,59 @@
                         <p>{{ animal.name }}</p>
                     </div>
                 </a>
+            {% endfor %}
         </div>
-        {% endfor %}
 
-        <h1>H</h1>
+        <h1 id="e">E</h1>
 
-        {% for animal in obj.7 %}
+        <br>
+        <div class="grid-container">
+        {% for animal in obj.4 %}
+
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+
+        <h1 id="f">F</h1>
+
+        <br>
+        <div class="grid-container">
+            {% for animal in obj.5 %}
+
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+        
+        <h1 id="g">G</h1>
+
+        <br>
+        <div class="grid-container">
+            {% for animal in obj.6 %}
+
+                <a href="{{ animal.get_absolute_url }}">
+                    <div class="animal-container">
+                        <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
+                        <p>{{ animal.name }}</p>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+
+        <h1 id="h">H</h1>
+
         <br>
         <div class="grid-container"> 
+            {% for animal in obj.7 %}
 
                 <a href="{{ animal.get_absolute_url }}">
                     <div class="animal-container">
@@ -126,14 +124,14 @@
                         <p>{{ animal.name }}</p>
                     </div>
                 </a>
+            {% endfor %}
         </div>
-        {% endfor %}
 
-        <h1>I</h1>
+        <h1 id="i">I</h1>
 
-        {% for animal in obj.8 %}
         <br>
         <div class="grid-container">
+            {% for animal in obj.8 %}
 
                 <a href="{{ animal.get_absolute_url }}">
                     <div class="animal-container">
@@ -141,14 +139,14 @@
                         <p>{{ animal.name }}</p>
                     </div>
                 </a>
+            {% endfor %}
         </div>
-        {% endfor %}
 
-        <h1>J</h1>
+        <h1 id="j">J</h1>
 
-        {% for animal in obj.9 %}
         <br>
         <div class="grid-container">
+            {% for animal in obj.9 %}
 
                 <a href="{{ animal.get_absolute_url }}">
                     <div class="animal-container">
@@ -156,14 +154,14 @@
                         <p>{{ animal.name }}</p>
                     </div>
                 </a>
+            {% endfor %}
         </div>
-        {% endfor %}
 
-        <h1>K</h1>
+        <h1 id="k">K</h1>
 
-        {% for animal in obj.10 %}
         <br>
         <div class="grid-container">
+            {% for animal in obj.10 %}
 
                 <a href="{{ animal.get_absolute_url }}">
                     <div class="animal-container">
@@ -171,14 +169,14 @@
                         <p>{{ animal.name }}</p>
                     </div>
                 </a>
+            {% endfor %}
         </div>
-        {% endfor %}
 
-        <h1>L</h1>
+        <h1 id="l">L</h1>
 
-        {% for animal in obj.11 %}
         <br>
         <div class="grid-container"> 
+            {% for animal in obj.11 %}
 
                 <a href="{{ animal.get_absolute_url }}">
                     <div class="animal-container">
@@ -186,14 +184,14 @@
                         <p>{{ animal.name }}</p>
                     </div>
                 </a>
+            {% endfor %}
         </div>
-        {% endfor %}
 
-        <h1>M</h1>
+        <h1 id="m">M</h1>
 
-        {% for animal in obj.12 %}
         <br>
         <div class="grid-container"> 
+            {% for animal in obj.12 %}
 
                 <a href="{{ animal.get_absolute_url }}">
                     <div class="animal-container">
@@ -201,14 +199,14 @@
                         <p>{{ animal.name }}</p>
                     </div>
                 </a>
+            {% endfor %}
         </div>
-        {% endfor %}
 
-        <h1>N</h1>
+        <h1 id="n">N</h1>
 
-        {% for animal in obj.13 %}
         <br>
         <div class="grid-container">
+            {% for animal in obj.13 %}
 
                 <a href="{{ animal.get_absolute_url }}">
                     <div class="animal-container">
@@ -216,14 +214,14 @@
                         <p>{{ animal.name }}</p>
                     </div>
                 </a>
+            {% endfor %}
         </div>
-        {% endfor %}
 
-        <h1>O</h1>
+        <h1 id="o">O</h1>
 
-        {% for animal in obj.14 %}
         <br>
         <div class="grid-container">
+            {% for animal in obj.14 %}
 
                 <a href="{{ animal.get_absolute_url }}">
                     <div class="animal-container">
@@ -231,14 +229,14 @@
                         <p>{{ animal.name }}</p>
                     </div>
                 </a>
+            {% endfor %}
         </div>
-        {% endfor %}
 
-        <h1>P</h1>
+        <h1 id="p">P</h1>
 
-        {% for animal in obj.15 %}
         <br>
         <div class="grid-container"> 
+            {% for animal in obj.15 %}
 
                 <a href="{{ animal.get_absolute_url }}">
                     <div class="animal-container">
@@ -246,14 +244,14 @@
                         <p>{{ animal.name }}</p>
                     </div>
                 </a>
+            {% endfor %}
         </div>
-        {% endfor %}
 
-        <h1>Q</h1>
+        <h1 id="q">Q</h1>
 
-        {% for animal in obj.16 %}
         <br>
         <div class="grid-container"> 
+            {% for animal in obj.16 %}
 
                 <a href="{{ animal.get_absolute_url }}">
                     <div class="animal-container">
@@ -261,14 +259,14 @@
                         <p>{{ animal.name }}</p>
                     </div>
                 </a>
+            {% endfor %}
         </div>
-        {% endfor %}
 
-        <h1>R</h1>
+        <h1 id="r">R</h1>
 
-        {% for animal in obj.17 %}
         <br>
         <div class="grid-container"> 
+            {% for animal in obj.17 %}
 
                 <a href="{{ animal.get_absolute_url }}">
                     <div class="animal-container">
@@ -276,14 +274,14 @@
                         <p>{{ animal.name }}</p>
                     </div>
                 </a>
+            {% endfor %}
         </div>
-        {% endfor %}
 
-        <h1>S</h1>
+        <h1 id="s">S</h1>
 
-        {% for animal in obj.18 %}
         <br>
         <div class="grid-container"> 
+            {% for animal in obj.18 %}
 
                 <a href="{{ animal.get_absolute_url }}">
                     <div class="animal-container">
@@ -291,14 +289,14 @@
                         <p>{{ animal.name }}</p>
                     </div>
                 </a>
+            {% endfor %}
         </div>
-        {% endfor %}
 
-        <h1>T</h1>
+        <h1 id="t">T</h1>
 
-        {% for animal in obj.19 %}
         <br>
         <div class="grid-container"> 
+            {% for animal in obj.19 %}
 
                 <a href="{{ animal.get_absolute_url }}">
                     <div class="animal-container">
@@ -306,14 +304,14 @@
                         <p>{{ animal.name }}</p>
                     </div>
                 </a>
+            {% endfor %}
         </div>
-        {% endfor %}
 
-        <h1>U</h1>
+        <h1 id="u">U</h1>
 
-        {% for animal in obj.20 %}
         <br>
         <div class="grid-container"> 
+            {% for animal in obj.20 %}
 
                 <a href="{{ animal.get_absolute_url }}">
                     <div class="animal-container">
@@ -321,14 +319,14 @@
                         <p>{{ animal.name }}</p>
                     </div>
                 </a>
+            {% endfor %}
         </div>
-        {% endfor %}
 
-        <h1>V</h1>
+        <h1 id="v">V</h1>
 
-        {% for animal in obj.21 %}
         <br>
         <div class="grid-container">
+            {% for animal in obj.21 %}
 
                 <a href="{{ animal.get_absolute_url }}">
                     <div class="animal-container">
@@ -336,14 +334,14 @@
                         <p>{{ animal.name }}</p>
                     </div>
                 </a>
+            {% endfor %}
         </div>
-        {% endfor %}
 
-        <h1>W</h1>
+        <h1 id="w">W</h1>
 
-        {% for animal in obj.22 %}
         <br>
         <div class="grid-container">
+            {% for animal in obj.22 %}
 
                 <a href="{{ animal.get_absolute_url }}">
                     <div class="animal-container">
@@ -351,14 +349,14 @@
                         <p>{{ animal.name }}</p>
                     </div>
                 </a>
+            {% endfor %}
         </div>
-        {% endfor %}
 
-        <h1>X</h1>
+        <h1 id="x">X</h1>
 
-        {% for animal in obj.23 %}
         <br>
         <div class="grid-container">
+            {% for animal in obj.23 %}
 
                 <a href="{{ animal.get_absolute_url }}">
                     <div class="animal-container">
@@ -366,14 +364,14 @@
                         <p>{{ animal.name }}</p>
                     </div>
                 </a>
+            {% endfor %}
         </div>
-        {% endfor %}
 
-        <h1>Y</h1>
+        <h1 id="y">Y</h1>
 
-        {% for animal in obj.24 %}
         <br>
         <div class="grid-container">
+            {% for animal in obj.24 %}
 
                 <a href="{{ animal.get_absolute_url }}">
                     <div class="animal-container">
@@ -381,22 +379,22 @@
                         <p>{{ animal.name }}</p>
                     </div>
                 </a>
+            {% endfor %}
         </div>
-        {% endfor %}
 
-        <h1>Z</h1>
+        <h1 id="z">Z</h1>
 
-        {% for animal in obj.25 %}
         <br>
         <div class="grid-container">
+            {% for animal in obj.25 %}
                 <a href="{{ animal.get_absolute_url }}">
                     <div class="animal-container">
                         <img src="{{ animal.image.all.first.image.url }}" alt="{{ animal.image.all.first.description }}">
                         <p>{{ animal.name }}</p>
                     </div>
                 </a>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
 
     

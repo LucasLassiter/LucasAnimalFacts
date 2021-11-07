@@ -2,6 +2,7 @@ from django.db import models
 from django.db.models.fields import CharField, DateField, TextField
 import os
 from django.db.models.fields.files import ImageField
+from django.urls import reverse
 from django.db.models.fields.related import ManyToManyField
 from animals.models import Tag
 
@@ -21,6 +22,10 @@ class Travel(models.Model):
     image =             ManyToManyField(TravelImage)
     date =              DateField()
     tag =               ManyToManyField(Tag)
+    slug =              models.SlugField()
 
     def __str__(self):
         return f'{self.pk} - {self.title}'
+
+    def get_absolute_url(self):
+        return reverse('travel:travel_detail', kwargs={'slug': self.slug}) 

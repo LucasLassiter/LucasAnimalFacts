@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.urls import path
 
-from animals.views import AnimalDetailView, AnimalListView
+from animals.views import AnimalDetailView, AnimalListView, AnimalSearch
 
 app_name = 'animals'
 urlpatterns = [
     path('<slug:slug>/', AnimalDetailView.as_view(), name='animal_detail'),
     path('', AnimalListView.as_view(), name='animal_list'),
+    path('search_results', AnimalSearch, name='search')
 ]

@@ -10,10 +10,14 @@
         <nav>
             <img id="exit-btn" class="exit-btn" src="{% static '/mainpictures/exit.svg' %}" alt="">
             <ul class="nav-element"> 
-                <a href=""><li>Animals</li></a>
+                <a href="{% url 'animals:animal_list' %}"><li>Animals</li></a>
                 <a href=""><li>News</li></a>
-                <a href=""><li>Travel</li></a>
-                <li><input class="search" type="text" placeholder="Search"></li>
+                <a href="{% url 'travel:travel_list' %}"><li>Travel</li></a>
+                <li><form method="POST" action="{% url 'animals:search' %}">
+                    {% csrf_token %}
+                    <input class="search" type="search" placeholder="Search" name="searched">
+                    <button type="submit">Search</button>
+                </form></li>
             </ul>
         </nav>
         
