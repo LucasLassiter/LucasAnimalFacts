@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --background: rgba(0, 214, 170, .85);
+}
+
+body {
+    margin: 0;
+    background-color: rgb(24, 24, 24);
+    font-family: poppins;
+}
+
+.container {
+    height: 100%;
+}
+
+    .main-element {
+        display: block;
+        position: relative;
+
+        .menu-btn {
+            position: absolute;
+            right: 1em;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    }
+
+.nav-mobile {
+    display: block;
+}
+
+nav {
+    display: none;
+    z-index: 999;
+    position: absolute;
+    background-color: #f2f2f2;
+    right: 0;
+    height: 100vh;
+    width: 66%;
+    text-align: right;
+    transform: translateY(1em);
+}
+
+.navbar {
+    margin: 0;
+    padding: 1em;
+    background-color: var(--background);
+    position: sticky;
+    z-index: 999;
+
+    .mainlogo {
+        width: 15em;
+    }
+
+    .exit-btn {
+        color: black;
+        margin: 2em 2em 0 0;
+        cursor: pointer;
+    }
+    
+    .nav-element {
+        margin-top: 3em;
+
+        li {
+            color: black;
+            font-size: 1.3em;
+            list-style: none;
+            margin: 1.5em 1.5em 0 0;
+        }
+    }
+}
+
+@media only screen and (min-width: 1080px) {
+
+    .exit-btn {
+        display: none;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    .navbar {
+        position: relative;
+
+        .main-element {
+            display: inline-block;
+        }
+
+        nav {
+            position: absolute;
+            display: inline-block;
+            top: 0;
+            background: none;
+            color: white;
+            height: auto;
+
+            .nav-element {
+                display: inline-block;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    color: white;
+                    display: inline-block;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}

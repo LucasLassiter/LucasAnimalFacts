@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}LucasAnimalFacts{% endblock %}
+
+{% block content %}
+<div class="hero-main">
+    <h1 class="main-title">Featured</h1>
+    <div class="hero-sect">
+        <div class="img-sect">
+            <a href="{{ animal_obj.get_absolute_url }}">
+                <img src="{{ animal_obj.image.all.first.image.url }}" alt="">
+            </a>
+            <div class="img-info">
+                <h1>Featured Animal - {{ animal_obj.name }}</h1>
+            </div>
+        </div>
+        <div class="cta">
+            <div class="cta-container">
+                <h1>Discover many more animals!</h1>
+                <a href="{% url 'animals:animal_list' %}">Discover</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="travel">
+        <h1>Travel</h1>
+        <ul class="travel-list">
+            {% for i in travel_list %}
+            <li>
+                <a href="{{ i.get_absolute_url }}">
+                    <div class="travel-item">
+                        <img src="{{ i.image.all.first.image.url }}" alt="{{ i.image.all.first.description }}">
+                        <h1>Travel - {{ i.title }}</h1>
+                        <p>{{ i.short_description }}</p>
+                    </div>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="news">
+        <h1>News</h1>
+        <ul class="news-sect">
+            {% for i in news_list %}
+            <li class="news-item">
+                <img src="{{ i.image.all.first.image.url }}" alt="{{ i.image.all.first.description }}">
+                <p>{{ i.short_description }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

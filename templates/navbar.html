@@ -1,0 +1,27 @@
+{% load static %}
+<div class="navbar">
+    <div class="container">
+        <div class="main-element">
+            <a href="{% url 'page_home' %}">
+                <img class="mainlogo" src="{% static '/mainpictures/Animal Facts Bannertansparences.png' %}" alt="">
+            </a>
+            <img id="menu-btn" class="menu-btn" src="{% static '/mainpictures/menu.svg' %}" alt="">
+        </div>
+        <nav>
+            <img id="exit-btn" class="exit-btn" src="{% static '/mainpictures/exit.svg' %}" alt="">
+            <ul class="nav-element"> 
+                <a href="{% url 'animals:animal_list' %}"><li>Animals</li></a>
+                <a href=""><li>News</li></a>
+                <a href="{% url 'travel:travel_list' %}"><li>Travel</li></a>
+                <li><form method="POST" action="{% url 'animals:search' %}">
+                    {% csrf_token %}
+                    <input class="search" type="search" placeholder="Search" name="searched">
+                    <button type="submit">Search</button>
+                </form></li>
+            </ul>
+        </nav>
+        
+    </div>
+</div>
+
+<script src="{% static '/scripts/index.js' %}"></script>

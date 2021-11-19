@@ -1,0 +1,72 @@
+{% extends 'Animal_Base.html' %}
+{% load static %}
+{% block title %}{{ object.name }}{% endblock %}
+{% block content %}
+    <div class="header">
+        <h1>{{ object.name }}</h1>
+        <img src="{{ object.image.all.first.image.url }}" alt="object.image.all.first.description">
+        <p>Written by {{ object.writer }}</p>
+        <p>{{ object.date }}</p>
+    </div>
+
+    <div class="table-sect">
+        <div class="desktop-table">
+            <table>
+                <tr>
+                    <td>Common Name: {{ object.common_name }}</td>
+                    <td>Scientific Name: {{ object.scientific_name }}</td>
+                    <td>Type: {{ object.animal_class }}</td>
+                </tr>
+                <tr>
+                    <td>Diet: {{ object.diet }}</td>
+                    <td>Average Life Span In The Wild: {{ object.avg_life_span }}</td>
+                    <td>Weight: {{ object.weight }}</td>
+                </tr>
+                <tr>
+                    <td class="bottom-row">Size: {{ object.size }}</td>
+                    <td class="bottom-row">Habitat: {{ object.habitat }}</td>
+                    <td class="bottom-row">Current Population Trend: {{ object.cur_pop_trend }}</td>
+                </tr>
+                </div>
+            </table>
+        </div>
+
+        <div class="mobile-table">
+
+        </div>
+    </div>
+
+    <div class="animal-info-sect">
+        {% for portion in split_info %}
+            <p>{{ portion }}</p>
+        {% endfor %}
+    </div>
+
+    <div class="carousel">
+        <button class="carousel-button carousel-button-left">
+            <img src="{% static 'mainpictures/key-left-svgrepo-com.svg' %}"  alt="">
+        </button>
+        <div class="carousel-track-container">
+            <ul class="carousel-track">
+                <li class="carousel-slide current-slide">
+                    <img class="carousel-image" src="{{ object.image.all.first.image.url }}" alt="{{ object.image.all.first.description }}">
+                </li>
+                <li class="carousel-slide">
+                    <img class="carousel-image" src="{{ object.image.all.1.image.url }}" alt="{{ object.image.all.1.description }}">
+                </li>
+                <li class="carousel-slide">
+                    <img class="carousel-image" src="{{ object.image.all.last.image.url }}" alt="{{ object.image.all.last.description }}">
+                </li>
+            </ul>
+        </div>
+        <button class="carousel-button carousel-button-right">
+            <img src="{% static '/mainpictures/key-left-svgrepo.com.svg' %}"  alt="">
+        </button>
+
+        <div class="carousel-nav">
+            <button class="carousel-indicator current-slide"></button>
+            <button class="carousel-indicator"></button>
+            <button class="carousel-indicator"></button>
+        </div>
+    </div>
+{% endblock %}
