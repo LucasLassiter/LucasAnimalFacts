@@ -1,0 +1,33 @@
+.search-term {
+    text-align: center;
+    color: white
+}
+
+.results-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 10% 0 10%;
+}
+
+.individual-result {
+    width: 30em;
+    background-color: white;
+    display: inline-block;
+    position: relative;
+    margin: 0 5% 5% 5%;
+}
+
+.individual-result img {
+    width: 100%;
+}
+
+.individual-result h1 {
+    text-align: center;
+    color: black;
+    font-size: 150%;
+}
+
+.individual-result a {
+    text-decoration: none;
+}
